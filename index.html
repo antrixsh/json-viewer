@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Add your favicon here -->
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1>JSON Viewer</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="input-method">
+                <label>
+                    <input type="radio" name="inputMethod" value="file" checked> Upload JSON File
+                </label>
+                <label>
+                    <input type="radio" name="inputMethod" value="text"> Paste JSON Content
+                </label>
+            </div>
+            <input type="file" id="fileInput" class="input-field">
+            <textarea id="jsonInput" class="input-field" placeholder="Paste your JSON content here" style="display:none;"></textarea>
+            <div class="buttons">
+                <button id="viewButton">View</button>
+                <button id="clearButton" style="display:none;">Clear</button>
+            </div>
+            <div id="jsonTable"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

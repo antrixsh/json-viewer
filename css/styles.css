@@ -1,0 +1,157 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    left: 0;
+}
+
+header {
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between logo and title */
+}
+
+footer {
+    bottom: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    width: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+    display: inline;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px; /* Adjust based on header height */
+    margin-bottom: 60px; /* Adjust based on footer height */
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden; /* Prevent textarea from overflowing */
+}
+
+.input-method {
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#jsonInput {
+    resize: vertical; /* Allow vertical resizing only */
+    max-height: 200px; /* Maximum height of the textarea */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#viewButton, #clearButton {
+    background-color: #df9116;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#viewButton:hover, #clearButton:hover {
+    background-color: darkorange;
+}
+
+#jsonTable {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Allow table to adjust based on content */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left; /* Align text to the left for better readability */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* JSON syntax highlighting */
+pre {
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.json-key {
+    color: brown;
+}
+
+.json-value-string {
+    color: green;
+}
+
+.json-value-number {
+    color: blue;
+}
+
+.json-value-boolean {
+    color: purple;
+}
+
+.json-value-null {
+    color: red;
+}
